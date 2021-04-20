@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5953782825366977063
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5953782825366977060}
+  - component: {fileID: 5953782825366977062}
+  - component: {fileID: 5953782825366977061}
+  - component: {fileID: 5953782825366977083}
+  m_Layer: 0
+  m_Name: Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5953782825366977060
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5953782825366977063}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5953782825366977062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5953782825366977063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59832c593781b3a44bde321a7095cff1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currAction: 0
+  currActionable: {fileID: 0}
+--- !u!114 &5953782825366977061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5953782825366977063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a08d71e1d2fa25642aed60c361295206, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useButton: {fileID: 0}
+  pickUpButton: {fileID: 0}
+  pushButton: {fileID: 0}
+  openButton: {fileID: 0}
+  lookAtButton: {fileID: 0}
+  talkToButton: {fileID: 0}
+--- !u!114 &5953782825366977083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5953782825366977063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d7eda84f42698d45a6fa2e4af57ffb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  default_use_text: I can't use that!
+  default_pickUp_text: Not picking that up.
+  default_push_text: 'I''m not pushing that. '
+  default_open_text: I'm not opening that.
+  pickUp_clip: {fileID: 7400000, guid: 2721c84b900cd254d85c868f690264ce, type: 2}
+  push_clip: {fileID: 7400000, guid: 0202b8247027c5d4b88a3146af997a4e, type: 2}
+  climb_clip: {fileID: 7400000, guid: 68fc61edc1fd55e4dbefa82328b47a68, type: 2}
+  chair_clip: {fileID: 7400000, guid: 9e56eb2a4288f04459511282e9538780, type: 2}
