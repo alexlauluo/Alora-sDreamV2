@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class UIButtonManager : MonoBehaviour
 {
     public Button useButton, pickUpButton, pushButton, openButton, lookAtButton, talkToButton;
+    public GameManager gameManager;
 
     public static UIButtonManager instance;
     private Color defaultColor = new Color32(161, 108, 195, 255);
@@ -33,7 +34,7 @@ public class UIButtonManager : MonoBehaviour
 
     public void resetButtonColor()
     {
-        switch ((int)GameManager.instance.currAction)
+        switch ((int)gameManager.currAction)
         {
             case 0:
                 useButton.GetComponent<Image>().color = defaultColor;
@@ -58,7 +59,7 @@ public class UIButtonManager : MonoBehaviour
 
     public void changeButtonColor()
     {
-        switch ((int)GameManager.instance.currAction)
+        switch ((int)gameManager.currAction)
         {
             case 0:
                 useButton.GetComponent<Image>().color = selectedColor;
@@ -84,6 +85,6 @@ public class UIButtonManager : MonoBehaviour
 
     void TaskWithParameters(int sel)
     {
-        GameManager.instance.SetAction(sel);
+        gameManager.SetAction(sel);
     }
 }

@@ -39,7 +39,8 @@ public class InventoryManager : MonoBehaviour
         if (items.Count == 6)
         {
             Debug.Log("Inventory full");
-        } else
+        }
+        else
         {
             items.Add(item);
             UpdateItemGroup();
@@ -58,10 +59,12 @@ public class InventoryManager : MonoBehaviour
         if (found == null)
         {
             ClearSelection();
-        } else if (selItem[0] == null)
+        }
+        else if (selItem[0] == null)
         {
             selItem[0] = found;
-        } else
+        }
+        else
         {
             selItem[1] = found;
             CompleteCombo();
@@ -72,7 +75,7 @@ public class InventoryManager : MonoBehaviour
 
     private void ClearSelection()
     {
-        for (int i=0; i<selItem.Length; i++)
+        for (int i = 0; i < selItem.Length; i++)
         {
             selItem[i] = null;
         }
@@ -91,17 +94,18 @@ public class InventoryManager : MonoBehaviour
 
     private void UpdateItemGroup()
     {
-        for (int i=0; i<items.Count; i++)
+        for (int i = 0; i < items.Count; i++)
         {
             Image image = ItemGroup.transform.GetChild(i).GetChild(0).GetComponent<Image>();
             image.sprite = items[i].sprite;
             image.enabled = true;
         }
-    } 
+    }
 }
 
 [System.Serializable]
-public class Combo {
+public class Combo
+{
     public Item item_one, item_two, final;
 
     public Combo(Item item_one, Item item_two, Item final)

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public enum Action {Use, PickUp, Push, Open, LookAt, TalkTo, None }
-    [HideInInspector]
+    public enum Action { Use, PickUp, Push, Open, LookAt, TalkTo, None }
     public Action currAction;
-    [HideInInspector]
+    public UIButtonManager uIButtonManager;
+
     public GameObject currActionable;
 
     public static GameManager instance;
@@ -29,13 +29,13 @@ public class GameManager : MonoBehaviour
 
     public void SetAction(int actionSel)
     {
-        UIButtonManager.instance.resetButtonColor();
-        if ((int) currAction == actionSel)
+        uIButtonManager.resetButtonColor();
+        if ((int)currAction == actionSel)
         {
             currAction = Action.None;
             return;
         }
-        switch(actionSel)
+        switch (actionSel)
         {
             case 0:
                 currAction = Action.Use;
@@ -56,6 +56,6 @@ public class GameManager : MonoBehaviour
                 currAction = Action.TalkTo;
                 break;
         }
-        UIButtonManager.instance.changeButtonColor();
+        uIButtonManager.changeButtonColor();
     }
 }
