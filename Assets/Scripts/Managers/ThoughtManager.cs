@@ -1,14 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 using UnityEngine.UI;
 
 public class ThoughtManager : MonoBehaviour
 {
     public GameObject thoughtBubble;
     public Animator animator;
-    public TMP_Text thoughtText;
+    public Text thoughtText;
     public bool open = false;
 
     public static ThoughtManager instance;
